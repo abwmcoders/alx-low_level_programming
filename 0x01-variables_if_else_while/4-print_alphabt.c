@@ -10,7 +10,7 @@ int main(void)
 	while (alphabet <= 'z')
 	{
 		putchar(alphabet);
-		if (alphabet == 'e' && alphabet == 'q')
+		if (alphabet == 'e' || alphabet == 'q')
 		{
 			continue;
 		}
