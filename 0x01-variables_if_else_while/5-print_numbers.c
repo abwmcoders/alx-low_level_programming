@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-	char number = 0;
+	int number = 0;
 
 	while (number < 10)
 	{
-		printf("%c", number);
+		printf("%d", number);
 		number++;
 	}
 	printf("\n");
