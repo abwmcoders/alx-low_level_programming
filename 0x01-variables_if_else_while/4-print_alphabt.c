@@ -9,11 +9,10 @@ int main(void)
 
 	for (alphabet; alphabet <= 'z'; alphabett++)
 	{
+		putchar(alphabet);
 		if (alphabet == 'e' || alphabet == 'q')
 		{
 			continue;
-		}
-		putchar(alphabet);
 	}
 	putchar('\n');
 	return (0);
