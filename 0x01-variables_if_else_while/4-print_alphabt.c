@@ -5,14 +5,15 @@
  */
 int main(void)
 {
-	char alphabet = 'a';
+	char abc;
 
-	for (alphabet; alphabet <= 'z'; alphabett++)
+	for (abc = 'a'; abc <= 'z'; abc++)
 	{
-		putchar(alphabet);
-		if (alphabet == 'e' || alphabet == 'q')
+		if (abc == 'q' || abc == 'e')
 		{
 			continue;
+		}
+		putchar(abc);
 	}
 	putchar('\n');
 	return (0);
