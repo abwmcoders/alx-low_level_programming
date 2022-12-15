@@ -1,16 +1,23 @@
 #include "berry.h"
 
 /**
- * add - prints out the addition of two numbers
- * @x: first value
- * @y: second value
- * Return: sum of two numbers
+ * print_alphabet_x10 - prints out the alphabet
+ * main - uses built in function
+ * Return: 0 if succesful
 */
 
-int add(int x, int y)
+void print_alphabet_x10(void)
 {
-	int i;
+	char i;
+	int x;
 
-	i = x + y;
-	return (i);
+	x = 0;
+
+	while (x < 10)
+	{
+		for (i = 'a'; i <= 'z'; i++)
+		_putchar(i);
+		_putchar('\n');
+		x++;
+	}
 }
