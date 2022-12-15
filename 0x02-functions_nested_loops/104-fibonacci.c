@@ -14,9 +14,11 @@ int main(void)
 	for (i = 1, sum = 1; a < 98; i++)
 	{
 		if (!(a % 2))
+		{
 			sum += a;
 			b = a + b;
 			a = b - a;
+		}
 	}
 	printf("%ld\n", sum);
 	return (0);
