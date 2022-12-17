@@ -1,5 +1,5 @@
-#ifndef BERRY_H
-#define BERRY_H
+#ifndef MAIN_H
+#define MAIN_H
 
 int _putchar(char c);
 int _isupper(int c);
@@ -13,6 +13,5 @@ void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int n);
 void print_number(int n);
-int pattern(int n);
 
-#endif /* BERRY_H */
+#endif /* MAIN_H */
