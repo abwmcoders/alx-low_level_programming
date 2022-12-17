@@ -1,4 +1,5 @@
 #include "berry.h"
+#include <stdio.h>
 
 /**
  * _isupper - checks for uppercase character
