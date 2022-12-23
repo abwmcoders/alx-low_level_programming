@@ -11,6 +11,7 @@ char *cap_string(char *);
 char *leet(char *a);
 char *rot13(char *a);
 void print_number(int n);
+int sum(int num1, int num2);
 void print_buffer(char *b, int size);
 
 #endif /*MAIN_H*/
