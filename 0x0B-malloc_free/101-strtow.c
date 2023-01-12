@@ -5,10 +5,10 @@
 /**
  * **strtow - splits sring
  * @*str: string
- * Return: return 0
+ * Return: return pointer
  */
 char **strtow(char *str)
 {
-	char * splitedtoken = strtok(str, " ");
+	char *splitedtoken = strtok(str, " ");
 	return splitedtoken;
 }
