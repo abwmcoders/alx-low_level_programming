@@ -10,6 +10,5 @@
 char **strtow(char *str)
 {
 	char * splitedtoken = strtok(str, " ");
-	printf( " %s\n", splitedtoken );
-	return 0;
+	return splitedtoken;
 }
