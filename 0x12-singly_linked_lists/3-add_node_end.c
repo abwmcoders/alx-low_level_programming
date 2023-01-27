@@ -1,57 +1,63 @@
-#include "lists.h"
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
+#include "lists.h"
 
 /**
- * _strlen - size of string
- * @str: string to get size of
- * Return: size of string
- */
-int _strlen(const char *str)
-{
-	int i;
-
-	for (i = 0; str[i]; i++)
-		;
-
-	return (i);
-}
-/**
- * add_node_end - adds a new node at the end of a list_t list
- * @head: struct list_t, node
- * @str: needs to be duplicated
- * Return: new list_t
- */
-
+  * add_node_end - Adds a new node at the end of a list
+  * @head: The original linked list
+  * @str: The string to add to the node
+  *
+  * Return: The address of the new list or NULL if it failed
+  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new, *last;
-	char *string = strdup(str);
+	list_t *new_list, *temp;
 
-	if (!string)
-		return (NULL);
-
-	new = malloc(sizeof(list_t));
-	if (!new)
+	if (str != NULL)
 	{
-		free(string);
-		return (NULL);
+		new_list = malloc(sizeof(list_t));
+		if (new_list == NULL)
+			return (NULL);
+
+		new_list->str = strdup(str);
+		new_list->len = _strlen(str);
+		new_list->next = NULL;
+
+		if (*head == NULL)
+		{
+			*head  = new_list;
+			return (*head);
+		}
+		else
+		{
+			temp = *head;
+			while (temp->next)
+				temp = temp->next;
+
+			temp->next = new_list;
+			return (temp);
+		}
 	}
 
-	new->str = string;
-	new->len = _strlen(string);
-	new->next = NULL;
+	return (NULL);
+}
 
-	if (*head == NULL)
+/**
+  * _strlen - Returns the length of a string
+  * @s: String to count
+  *
+  * Return: String length
+  */
+int _strlen(const char *s)
+{
+	int c = 0;
+
+	while (*s)
 	{
-		*head = new;
-		return (new);
+		s++;
+		c++;
 	}
 
-	for (last = *head; last->next != NULL; last = last->next)
-		;
-
-	last->next = new;
-	return (new);
+	return (c);
 }
